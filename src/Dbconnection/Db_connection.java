@@ -16,8 +16,9 @@ public class Db_connection {
     private static Connection connection;
 	static {
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-            connection = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:XE","system","chandru");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cargo","root", "Chandru@123");
+                        connection.setAutoCommit(true);
 		}
 		catch (Exception e) {
 			System.out.println(" "+e);
@@ -27,4 +28,7 @@ public class Db_connection {
 	{
 		return connection;
 	}
+        public static void main(String[] args) {
+        
+    }
 }

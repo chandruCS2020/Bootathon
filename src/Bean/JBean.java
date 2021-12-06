@@ -5,11 +5,13 @@
  */
 package Bean;
 
+import java.io.Serializable;
+
 /**
  *
  * @author chandru
  */
-public class JBean {
+public class JBean implements Serializable{
     private String customer_name,customer_phone,customer_email,customer_password,customer_address,customer_uname,customer_Uid;
     private int customer_id;
     public String getCustomer_name() {
